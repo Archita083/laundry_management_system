@@ -1,0 +1,36 @@
+ host: 'localhost',
+ user: 'laundryadmin', /* MySQL User */
+ password: 'admin@1', /* MySQL Password */
+ database: 'laundrydb' /* MySQL Database */
+
+1) To create a database below command to be executed 
+   CREATE DATABASE laundrydb CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+2) To viwe the database use this command 
+   show databases;
+
+3) To use the database use this command
+   USE laundrydb;
+
+4) To create table below command to be executed 
+		create table user_table(
+		id int not null auto_increment,
+		Fullname varchar(20),
+		Email varchar(80),
+		Phone_number varchar(15),
+		Password varchar(64)
+		);
+
+5) To show the database we use this command
+		select * from user_table;
+
+6) To insert the data into the database we use this command
+	insert into user_table (id, Fullname, Email, Phone_number, Password) values (1, 'Archita Mishra', 'architamishra674@gmail.com', 6372487005, 'rima');
+
+
+
+
+
+												
+
+
