@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #first-section {
+            width: 1420px;
+            height: 600px;
+            border-color: white;
+        }
+        #second-section {
+            width: 1420px;
+            height: 20px;
+            background-color: rgba(105, 105, 105, 0.523);
+        }
+        #submit {
+            background-color: blue;
+            width: 246px;
+            height: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 4px;
+            
+            
+        }
+        
+        #fourth-section {
+            width: 320px;
+            height: 380px;
+            background-color: rgb(252, 240, 255);
+            margin-left: 550px;
+            margin-right: 650px;
+            margin-top: 40px;
+            padding:60px 20px 20px 20px;
+            
+            border-radius: 10px;
+            text-align: center;
+        }
+        #input {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px;
+            border-style: solid;
+        }
+        #request {
+            font-family: 'Times New Roman', Times, serif;
+           
+            padding-left: 0px;
+            padding-right: 20px;
+            
+        }
+        
+        #pickup {
+            width: 150px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first-section">
+        <div id="second-section"></div>
+        <div id="fourth-section">
+        <form action="/savenewrequest?email={{email}}">
+            <p id="request"> New Request </p>
+            <p>Pickup Date :<input type="date" id="pickup" name="pickupdate" placeholder="Pickup Date"></p>
+            <p><input type="text" id="input" name="topwear" placeholder="Topwear(T-shirt,Top,Shirt)"></p> 
+            <p><input type="text" id="input" name="bottomwear" placeholder="Bottomwear(Lower,Jeans,Leggins)"></p>
+            <p><input type="text" id="input" name="otherwears" placeholder="Others"></p>
+            <p><input type="hidden" id="input" name="email" value="{{email}}"></p>
+            
+            <p><input type="submit" id="submit" value="Submit" ></p>
+         {{#if mesg1}}
+                <h3>Request saved successfull</h3>
+                {{/if}}
+
+               {{#if mesg2}}
+                <h3>Unable to save request , Please resubmit with proper data !</h3>
+               {{/if}}
+        </form>
+        <p><a href="/homepage">Home page</a></p>
+        </div>
+    </div>    
+</body>
+</html>

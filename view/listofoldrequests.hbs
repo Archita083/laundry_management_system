@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Pickup date</th>
+      <th scope="col">Topwear</th>
+      <th scope="col">Bottom wear</th>
+       <th scope="col">Other Wears</th>
+       <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#data}}
+    <tr>
+     
+      <td>{{pickupdate}}</td>
+      <td>{{topwear}}</td>
+      <td>{{bottomwear}}</td>
+      <td>{{otherwears}}</td>
+      <td>{{status}}</td>
+    </tr>
+    {{/data}}
+   
+    
+  </tbody>
+</table>
+    <p><a href="/homepage">Home page</a></p>
+</body>
+</html>

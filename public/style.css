@@ -1,0 +1,74 @@
+        #register {
+            background-color: blue;
+            width: 246px;
+            height: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 4px;
+        }
+        #first-section {
+            width: 1420px;
+            height: 600px;
+            background-color: rgba(128, 128, 128, 0.415);
+            margin:0px 0px 0px 0px;
+            padding: 50px 50px 50px 50px ;
+        }
+        #lms {
+            font-family: 'Times New Roman', Times, serif;
+           
+            padding-left: 0px;
+            padding-right: 20px;
+            
+        }
+        a {
+
+            text-align: center;
+            text-decoration: darkblue;
+
+        }
+        #second-section {
+            width: 320px;
+            height: 450px;
+            background-color: rgba(205, 80, 80, 0.745);
+            margin-left: 550px;
+            margin-right: 650px;
+            margin-top: 40px;
+            padding:60px 20px 20px 20px;
+            
+            border-radius: 10px;
+            text-align: center;
+        }
+        #input {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px;
+            border-style: solid;
+        }
+    
+        #fullname {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px;
+            border-style: solid;
+        }
+    
+        #phonenumber {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px;
+            border-style: solid;
+        }
+    
+        #email {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px;
+            border-style: solid;
+        }
+    
+        #password {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px;
+            border-style: solid;
+        }
+    

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="first-section">
+    <div id="second-section">
+        <form action="/user_registration" onsubmit="return formValidation()">
+            <p id="lms">LMS || User Registration</p>
+            <p><input id="fullname" type = "text" name = "fullname" placeholder="Full name"/></p> 
+
+            <p><input id="phonenumber" type = "text" name = "phonenumber" placeholder="Phone number"/></p>
+ 
+            <p><input id="email" type="text" name="email" placeholder="Email"/></p>
+
+            <p><input id="password" type="text" name="password" placeholder="Password"/></p>
+
+            <p>
+            <label></label>
+            <select name="usertype" id="input">
+            <option value = "Laundry user">Laundry user</option>
+            <option value = "Laundry emolyee">Laundry employee</option>
+            </select></p>
+
+            <input id="register" type = "submit" name = "submit" value = "Register"/>
+
+            <p><a href="/homepage">Home Page</a></p>
+
+            {{#if mesg1}}
+            <h3>Registration seccessfull</h3>
+            {{/if}}
+      
+            {{#if mesg2}}
+            <h3>Registration unseccessfull</h3>
+            {{/if}}
+
+        </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
