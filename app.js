@@ -1,4 +1,4 @@
-const { response } = require("express");
+const { response, query } = require("express");
 const express = require("express");
 const app = express();
 const port = 3004
@@ -15,8 +15,8 @@ app.get("/homepage", (req,res) => {
      res.render("homepage");
 });
 
-app.get("/registration", (req,res) => {
-   res.render("registration");
+app.get("/register", (req,res) => {
+   res.render("register");
    
 });
 
@@ -29,10 +29,10 @@ app.get("/user_registration", (req,res) => {
                   else {                     
 
                      if (results.affectedRows>0) {                        
-                        res.render("registration", {mesg1: true, mesg2: false})                        
+                        res.render("register", {mesg1: true, mesg2: false})                        
 
                      } else {   
-                        res.render("registration", {mesg1: false, mesg2: true})
+                        res.render("register", {mesg1: false, mesg2: true})
                      }
                   }
    
@@ -46,17 +46,17 @@ app.get("/login", (req,res) => {
 app.get("/validatelogin", (req, res) => {
    // fetching data from form
    const { email, password} = req.query
-console.log(email);
+
    // Sanitization XSS...
    let qry = "select usertype,email from user_table where email=? and password=?";
    mysql.query(qry, [email, password], (err, results) => {
                   if(err) {
-                     console.log("if errors statement");
+                     
                      res.render("login", {mesg1: false, mesg2: true})
                   }
                   else {
                      console.log(results[0].usertype);
-                    // res.send(results.get);
+                    
                      if (results[0].usertype== "Laundry user") {
                         console.log("to go the dashboardlaundryuser"+ results[0].email);
                         res.render("dashboardlaundryuser", {email: results[0].email})
@@ -74,13 +74,9 @@ app.get("/dashboardlaundryuser", (req,res) => {
    res.render("dashboardlaundryuser");
 });
 
-app.get("/dashboardlaundryemployee", (req,res) => {
-   res.render("dashboardlaundryemployee");
-});
-
 app.get("/newrequest", (req,res) => {
    const {email} = req.query
-   console.log("Inside new request"+email);
+   
    res.render("newrequest" , {email: email});
 });
 
@@ -105,7 +101,7 @@ app.get("/savenewrequest", (req,res) => {
                 })             
 });
 
-app.get("/oldrequests", (req,res) => {
+app.get("/listofoldrequests", (req,res) => {
    const {email}= req.query
    let qry = "select * from request_table where email=?";
 
@@ -115,10 +111,52 @@ app.get("/oldrequests", (req,res) => {
          res.render("dashboardlaundryuser", {email: email})
       }
       else {
-         // res.send(results.get);
+         
         res.render("listofoldrequests", { data: results });
       }
 })
+});
+
+app.get("/dashboardlaundryemployee", (req,res) => {
+   res.render("dashboardlaundryemployee");
+});
+
+app.get("/retrievedataofsubmitedrequest", (req, res) => {
+   let status="submitted"
+   console.log(req.query);
+   let qry = "select * from request_table where status=?";
+
+   mysql.query(qry, [status], (err, results) => {
+      
+      if(err) throw err
+         else {
+            console.log(results);
+      if (results.length > 0){
+            res.render("updationofsubmitedrequest", {data: results});
+         } else {
+         
+        res.render("updationofsubmitedrequest", {data: results});
+      }
+   }
+})
+});
+
+app.get("/updationofsubmitedrequest", (req,res) => {
+   res.render("updationofsubmitedrequest");
+});
+
+app.get("/updatestatus", (req,res) => {
+   const { status, email} = req.query 
+   console.log(status, email);
+   let qry = "update request_table set status=? where email=?";
+   mysql.query(qry, [status, email], (err, results) => {
+      if (results.affectedRows>0) {
+         res.render("showupdatestatus", {mesg1: true, mesg2: false})
+      } else {
+         res.render("showupdatestatus", {mesg1: true, mesg2: false})
+      }
+
+   })
 });
 
 app.get("/changepassword", (req,res) => {
@@ -145,25 +183,30 @@ app.get("/savechangepassword", (req,res) => {
 });
 
 app.get("/forgotpassword", (req,res) => {
-   
    res.render("forgotpassword");
 });
 
-app.get("/saveforgotpassword", (req,res) => {
-   const { fullname, email} = req.query
-     
-                let qry = "select password user_table where fullname=? and email=?";
-                mysql.query(qry, [fullname, email], (err, results) => {
-                  res.send(results)
-                  
-                  if(err) throw err
-                  else {                     
+app.get("/showforgotpassword", (req,res) => {
+   res.render("showforgotpassword");
+});
 
-                     if (results.affectedRows>0) {                        
-                        res.render("forgotpassword", {mesg1: true, mesg2: false})                        
+app.get("/getforgotpassword", (req,res) => {
+   const { fullname, email} = req.query
+   console.log("inside the getforgot password"+fullname);
+                let qry = "select password from user_table where fullname=? and email=?";
+                mysql.query(qry, [fullname, email], (err, results) => {
+                  console.log("inside the getforgot password"+email);
+                  if(err) throw err
+                  else {  
+                     console.log(results.length);                    
+
+                     if (results.length > 0) { 
+                        
+                        console.log("go to the show forgotpasssword"+results[0].password);                      
+                        res.render("showforgotpassword", {mesg1: true, password: results[0].password, mesg2: false})                        
 
                      } else {   
-                        res.render("forgotpassword", {mesg1: false, mesg2: true})
+                        res.render("showforgotpassword", {mesg1: false, mesg2: true})
                      }
                   }
    

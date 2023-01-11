@@ -1,13 +1,13 @@
     const fullname = document.getElementById("fullname");
-    const phonenumber = document.user_registration.phonenumber;
-    const email = document.user_registration.email;
-    const password = document.user_registration.password;
+    const phonenumber = document.getElementById("phonenumber");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
 
 // function for form varification
 function formValidation() {
   
   // checking name length
-  if (fullname.value.length < 2 || fullname.value.length > 20) {
+  if (fullname.value.length > 2 || fullname.value.length < 20) {
     alert("Name length should be more than 2 and less than 21");
     fullname.focus();
     return false;

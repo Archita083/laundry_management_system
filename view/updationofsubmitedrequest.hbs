@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Pickup date</th>
+      <th scope="col">Topwear</th>
+      <th scope="col">Bottom wear</th>
+       <th scope="col">Other Wears</th>
+       <th scope="col">Status</th>
+       <th scope="col">Email</th>
+       <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#data}}
+    <tr>
+      <form action="/updatestatus">
+      <td><p><input type="text" value="{{pickupdate}}" disabled></p></td>
+      <td><p><input type="text" value="{{topwear}}" disabled></p></td>
+      <td><p><input type="text" value="{{bottomwear}}" disabled></p></td>
+      <td><p><input type="text" value="{{otherwears}}" disabled></p></td>
+      <td><p><label></label>
+            <select name="status" value="{{status}}">
+            <option value = "submitted">Submitted</option>
+            <option value = "done">Done</option>
+            </select></p></td>
+      <td><input type="hidden" name="email" value="{{email}}"></p></td>
+      <td><p><input type="submit" name="submit" value="Update"></p></td>
+    </form> 
+    </tr>
+    {{/data}}
+   
+    
+  </tbody>
+</table>
+    <p><a href="/dashboardlaundryemployee">Laundry Employee Dashboard</a></p>
+</body>
+</html>

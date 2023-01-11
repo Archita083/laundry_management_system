@@ -16,13 +16,27 @@
             padding: 50px 50px 50px 50px ;
             
         }
-        #dashboard {
+        #newrequest {
             width:130px ;
             height: 30px;
             background-color: rgba(0, 255, 255, 0.305);
             text-align: center;
             text-decoration-color: black;
             border-radius: 3px;
+            float: right;
+        }
+        #oldrequest {
+            width:130px ;
+            height: 30px;
+            background-color: rgba(0, 255, 255, 0.305);
+            text-align: center;
+            text-decoration-color: black;
+            border-radius: 3px;
+            float: right;
+           
+        }
+        h1 {
+            margin-top: 0px;
         }
 
         
@@ -30,7 +44,7 @@
 </head>
 <body>
     <div id="first-section">
-        <h1> User Dashboard</h1>
+        <h1>User Dashboard</h1>
 
          <form action="/newrequest">
             <p><input type="hidden" id="input" name="email" value="{{email}}"></p>
@@ -38,10 +52,10 @@
             <p><input type="submit" id="newrequest" value="New request" ></p>
         </form>
 
-        <form action="/oldrequests">
+        <form action="/listofoldrequests">
             <p><input type="hidden" id="input" name="email" value="{{email}}"></p>
             
-            <p><input type="submit" id="oldrequest" value="View Old Requests" ></p>
+            <br><p><input type="submit" id="oldrequest" value="View Old Requests" ></p>
         </form>
         
     </div>
