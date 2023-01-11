@@ -1,15 +1,23 @@
 CREATE DATABASE laundrydb CHARACTER SET utf8 COLLATE utf8_general_ci;
-show databases;
+
 USE laundrydb;
+
 create table user_table(
-id int not null auto_increment,
-Fullname varchar(20),
-Email varchar(80),
-Phone_number varchar(15),
-Password varchar(64)
+fullname varchar(50),
+phonenumber varchar(20),
+email varchar(80) primary key,
+password varchar(70),
+usertype varchar(20)
 );
-select * from user_table;
-insert into user_table (id, Fullname, Email, Phone_number, Password) values (1, 'Archita Mishra', 'architamishra674@gmail.com', 6372487005, 'rima');
+
+create table request_table(
+pickupdate date not null,
+topwear int,
+bottomwear int,
+otherwears int,
+email varchar(80),
+status varchar(80)
+);
 
 
 
