@@ -31,7 +31,7 @@
         #first-section {
             width: 1420px;
             height: 600px;
-            background-color: rgba(128, 128, 128, 0.415);
+            background-color: hsl(196, 77%, 81%);
             margin:0px 0px 0px 0px;
             padding: 50px 50px 50px 50px ;
         }
@@ -47,10 +47,15 @@
             border-radius: 5px;
             text-align: center;
         }
-        #input {
+        #email {
             border-radius: 4px;
             width: 240px;
             height: 20px;
+        }
+        #password {
+            border-radius: 4px;
+            width: 240px;
+            height: 20px; 
         }
         
         
@@ -62,9 +67,9 @@
             <form action="/validatelogin">
                 <p id="lms">LMS || User Login</p>
      
-                <p><input id="input" type="text" name="email" placeholder="Email"/></p>
+                <p><input id="email" type="text" name="email" placeholder="Email"/></p>
     
-                <p><input id="input" type="text" name="password" placeholder="Password"/></p>
+                <p><input id="password" type="text" name="password" placeholder="Password"/></p>
                 <input id="login" type = "submit" name = "submit" value = "Login"/>
 
                 <p><a href="/homepage">Home page</a></p>

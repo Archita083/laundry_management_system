@@ -9,7 +9,7 @@
         #first-section {
             width: 1420px;
             height: 600px;
-            background-color: rgba(128, 128, 128, 0.415);
+            background-color: hsl(196, 77%, 81%);
             font-weight: 300;
             text-align: center;
             margin:0px 0px 0px 0px;
@@ -24,6 +24,14 @@
             text-decoration-color: black;
             border-radius: 3px;
         }
+        #status {
+            width:130px ;
+            height: 30px;
+            background-color: rgba(0, 255, 255, 0.305);
+            text-align: center;
+            text-decoration-color: black;
+            border-radius: 3px;
+        }
 
         
     </style>
@@ -31,7 +39,7 @@
 <body>
     <div id="first-section">
         <h1>Employee Dashboard</h1>
-        <a href="/retrievedataofsubmitedrequest">Update status</a>
+        <a href="/retrievedataofsubmitedrequest"><input type="button" id="status" value="Update Status"></a>
     </div>
 </body>
 </html>
