@@ -7,10 +7,12 @@ The laundry management system aim is to provide laundry related facilities to th
 
 ## Solution Design :
 The laundry management system using the MVC architechture:
-- M(model): Model is mainly the database where we store the data of this managemnet system using mysql.
+- M(model): Model is mainly the MySQL database where we store the data in two table (user and request) of this managemnet system using mysql.
 - V(view): View is mainly focus the frontend part of the management system using handelbars(hbs), css, javascript.
-- C(controller): Controller is mainly focus the backend part of the management system using node.js.
-Here we design the home page , resister page , login page, user dashboard, employee dashboard, new request page, old request page, update status page.
+- C(controller): Controller is mainly focus the backend part of the management system using node.js's App.js file.
+Here we design the below pages:
+- home page.
+ resister page , login page, user dashboard, employee dashboard, new request page, old request page, update status page.
 
 ## Technology involved:
 - Handelbars
@@ -18,13 +20,8 @@ Here we design the home page , resister page , login page, user dashboard, emplo
 - javascript
 - node.js
 - mysql
-
 ## Project Structure :
-- The laundry management system follows the CRUD operation:
-- CREATE operations: Here we create a new record on the database.
-- READ operations: Here we read the table or row using select method.
-- UPDATE operations: Here we update the data in the table within the WHERE clause.
-- DELETE operations: Here we delete a specified row in the WHERE clause.
+- ![Optional Text](/images/projectstructure.png)
 
 ## Assumption:
 - We have two types of user:
@@ -33,10 +30,6 @@ Here we design the home page , resister page , login page, user dashboard, emplo
 - Here we have two dashboard one is laundry user dashboard and another one is the laundry employee dashboard.
 - In laundry user dashboard the user can raise a new request using the provided email id and also their old request list and status.
 - In laundry employee dashboard the employee can see the requests and update the status.  
-
-## Project Structure :
-- ![Optional Text](/images/projectstructure.png)
-
 
 ## Steps to run the application
   ### Step -1: Installed node.js in your system
