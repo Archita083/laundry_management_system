@@ -10,9 +10,15 @@ The laundry management system using the MVC architechture:
 - M(model): Model is mainly the MySQL database where we store the data in two table (user and request) of this managemnet system using mysql.
 - V(view): View is mainly focus the frontend part of the management system using handelbars(hbs), css, javascript.
 - C(controller): Controller is mainly focus the backend part of the management system using node.js's App.js file.
-Here we design the below pages:
-- home page.
- resister page , login page, user dashboard, employee dashboard, new request page, old request page, update status page.
+- Here we design the below pages:
+- Home page.
+- Register page. 
+- Login page.
+- User dashboard. 
+- Employee dashboard. 
+- New request page.
+- Old request page. 
+- Update status page.
 
 ## Technology involved:
 - Handelbars
@@ -20,6 +26,7 @@ Here we design the below pages:
 - javascript
 - node.js
 - mysql
+
 ## Project Structure :
 - ![Optional Text](/images/projectstructure.png)
 
@@ -41,6 +48,7 @@ Here we design the below pages:
  ### Step -2: Installed mysql in your system
 
  - Then create a database using this file:"laundry_management_system/MYSQL Query/sqlquery.sql"
+
  ### URls
 - https://www.lifewire.com/how-to-install-mysql-windows-10-4584021
 - https://www.itsolutionstuff.com/post/node-js-crud-with-mysql-tutorial-exampleexample.html
