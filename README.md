@@ -35,7 +35,7 @@ Here we design the home page , resister page , login page, user dashboard, emplo
 - In laundry employee dashboard the employee can see the requests and update the status.  
 
 ## Project Structure :
-- ![Optional Text](/image/projectstructure.png)
+- ![Optional Text](/images/projectstructure.png)
 
 
 ## Steps to run the application
