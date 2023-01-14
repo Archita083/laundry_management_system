@@ -7,23 +7,34 @@
     <title>Document</title>
     <style>
         #first-section {
-            width: 1420px;
-            height: 600px;
+            width: 1515px;
+            height: 50px;
             background-color: hsl(196, 77%, 81%);
-            font-weight: 300;
+            font-weight: bold;
+            font-size: medium;
+            padding-left: 4px; 
+            padding-right: 4px;
             text-align: center;
-            margin:0px 0px 0px 0px;
-            padding: 50px 50px 50px 50px ;
+        }
+        #second-section {
+            width: 1420px;
+            height: 90px;
+            background-color: hsl(0, 0%, 100%);
+            font-weight: 20px;
+            font-size: medium;
+            text-align: center;
+            padding: 0px 50px 50px 50px ;
             
         }
-        #dashboard {
-            width:130px ;
-            height: 30px;
-            background-color: rgba(0, 255, 255, 0.305);
-            text-align: center;
-            text-decoration-color: black;
-            border-radius: 3px;
+        #third-section {
+            width: 1420px;
+            height: 380px;
+            margin:0px 0px 0px 0px;
+            padding: 50px 50px 50px 50px ;
+            background-image: url("https://partselectcom.azureedge.net/assets/content/58702/laundry-cheat-sheet-header.png");
         }
+        
+        
         #status {
             width:130px ;
             height: 30px;
@@ -32,14 +43,22 @@
             text-decoration-color: black;
             border-radius: 3px;
         }
-
-        
+       #logout {
+        float: right;
+        padding-right: 10px;
+       }
     </style>
 </head>
 <body>
     <div id="first-section">
+        <p id="logout"><a href="/homepage">Log out</a></p>
+        <p><h1>Laxmi Laundry Management System</h1></p>
+        
+    </div>
+    <div id="second-section">
         <h1>Employee Dashboard</h1>
         <a href="/retrievedataofsubmitedrequest"><input type="button" id="status" value="Update Status"></a>
     </div>
+    <div id="third-section"></div>
 </body>
 </html>

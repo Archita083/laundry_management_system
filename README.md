@@ -1,9 +1,9 @@
 ## Welcome to laundry management system code
 ## Requirements:
-The laundry management system aim is to provide laundry related facilities to the user like washing, dry cleaning and iron , it give some beneficial facilities like:
+The laundry management system's aim is to provide laundry related facilities to the user like washing, dry cleaning and ironing. It is beneficial in many terms like:
 - It saves our time , like we place a order in online and don't need to go anywhere for placing a order.
 - The user can easily see their request status like it's submitted or inprogress or done.
-- Here the data of a user stay safely. 
+- User data is secured.
 
 ## Solution Design :
 The laundry management system using the MVC architechture:

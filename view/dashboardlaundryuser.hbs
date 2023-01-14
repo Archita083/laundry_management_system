@@ -6,15 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #first-section {
-            width: 1420px;
-            height: 600px;
+       #first-section {
+            width: 1515px;
+            height: 50px;
             background-color: hsl(196, 77%, 81%);
-            font-weight: 300;
+            font-weight: bold;
+            font-size: medium;
+            padding-left: 4px; 
+            padding-right: 4px;
             text-align: center;
+        }
+        #second-section {
+            width: 1420px;
+            height: 90px;
+            background-color: hsl(0, 0%, 100%);
+            font-weight: 20px;
+            font-size: medium;
+            text-align: center;
+            padding: 0px 50px 50px 50px ;
+        }
+
+        #third-section {
+            width: 1420px;
+            height: 380px;
             margin:0px 0px 0px 0px;
             padding: 50px 50px 50px 50px ;
-            
+            background-image: url("https://partselectcom.azureedge.net/assets/content/58702/laundry-cheat-sheet-header.png");
         }
         #newrequest {
             width:130px ;
@@ -23,7 +40,7 @@
             text-align: center;
             text-decoration-color: black;
             border-radius: 3px;
-            float: right;
+            
         }
         #oldrequest {
             width:130px ;
@@ -32,19 +49,22 @@
             text-align: center;
             text-decoration-color: black;
             border-radius: 3px;
-            float: right;
-           
         }
-        h1 {
-            margin-top: 0px;
-        }
+         #logout {
+        float: right;
+        padding-right: 20px;
+       }
 
         
     </style>
 </head>
 <body>
     <div id="first-section">
-        <h1>User Dashboard</h1>
+        <p id="logout"><a href="/homepage">Log out</a></p>
+        <p><h1>Laxmi Laundry Management System</h1></p>
+    </div>
+    <div id="second-section">
+        <p><h1>User Dashboard</h1></p>
 
          <form action="/newrequest">
             <p><input type="hidden" id="input" name="email" value="{{email}}"></p>
@@ -55,9 +75,9 @@
         <form action="/listofoldrequests">
             <p><input type="hidden" id="input" name="email" value="{{email}}"></p>
             
-            <br><p><input type="submit" id="oldrequest" value="View Old Requests" ></p>
+            <p><input type="submit" id="oldrequest" value="View Old Requests" ></p>
         </form>
-        
     </div>
+    <div id="third-section"></div>
 </body>
 </html>
